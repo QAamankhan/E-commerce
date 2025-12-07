@@ -1,18 +1,28 @@
 package base;
 
+import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BaseClass {
 	WebDriver driver;
-
+	WebDriverWait wait;
 	
 	public BaseClass(WebDriver driver){
 		this.driver=driver;
+		wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 	}
 	
-	public void OpenBrowser() {
-		driver= new ChromeDriver();
-		driver.get("https://www.snaffle.com.au/");
+	public void ElementClickAble(WebElement element) {
+		wait.until(ExpectedConditions.elementToBeClickable(element)).click();
+	}
+	
+	public void ElementVisible(WebElement element) {
+		wait.until(ExpectedConditions.visibilityOf(element)).click();
 	}
 }
