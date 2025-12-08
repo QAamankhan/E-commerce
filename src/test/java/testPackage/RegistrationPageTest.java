@@ -15,12 +15,12 @@ public class RegistrationPageTest extends BaseTestClass {
 	RegistrationPage rp;
 	
 	
-	@BeforeMethod
+	@BeforeMethod(groups = {"Registration","Regression"})
 	public void ObjectCreation() {
 	rp =  new RegistrationPage(driver);
 	}
 
-	@Test
+	@Test(groups = {"Registration","Regression"})
 	public void TC01() {
 		
 		rp.ClickOnLoginLogo();
@@ -28,14 +28,14 @@ public class RegistrationPageTest extends BaseTestClass {
 	
     boolean loginStatus = false;
 
-	@Test
+	@Test(groups = {"Registration","Regression"})
     public void TC02_Login() throws Exception {
       boolean  result = rp.RegistrationForm("88aamankhan@gmail.com", "Aman@1234");
       
       loginStatus=result;
     }
 
-    @Test(dependsOnMethods = "TC02_Login")
+    @Test(dependsOnMethods = "TC02_Login" , groups = {"Registration","Regression"})
     public void TC03_ForgotPassword() {
 
         if (loginStatus == true) {
