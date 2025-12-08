@@ -8,6 +8,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 
@@ -19,16 +21,19 @@ public class BaseTestClass {
 	
 	
 	@BeforeSuite
-	public void init() {
+	@Parameters("URL")
+	public void init(String url) {
 		driver= new ChromeDriver();
-		driver.get("https://www.snaffle.com.au/");
+		driver.get(url);
 
 	}
 	
 	
-	@AfterSuite
-	public void tearDown() {
-		driver.quit();
-	}
+	
+	
+//	@AfterSuite
+//	public void tearDown() {
+//		driver.quit();
+//	}
 	
 }
