@@ -3,15 +3,20 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <parameter name="URL" value="https://www.snaffle.com.au/"/>
   <test thread-count="5" name="Test(failed)">
+    <groups>
+      <run>
+        <include name="Regression"/>
+      </run>
+    </groups>
     <classes>
-      <class name="testPackage.RegistrationPageTest">
+      <class name="testPackage.SearchBoxTest">
         <methods>
-          <include name="TC03_ForgotPassword"/>
           <include name="init"/>
+          <include name="tearDown"/>
+          <include name="TC04"/>
           <include name="ObjectCreation"/>
-          <include name="TC02_Login"/>
         </methods>
-      </class> <!-- testPackage.RegistrationPageTest -->
+      </class> <!-- testPackage.SearchBoxTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
