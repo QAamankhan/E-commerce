@@ -24,6 +24,21 @@ public class RegistrationPage  extends BaseClass{
 		ElementVisible(LogoBtn);
 	}
 	
+	@FindBy(xpath = "//input[@placeholder='Email address']") WebElement emailfiled;
+	@FindBy(xpath = "//input[@placeholder='Password']") WebElement passwordfield;
+	@FindBy(xpath = "//button[.='Sign In']") WebElement signInBtn;
+	public void RegistrationForm(String email,String pass ) {
+		ElementVisible(emailfiled);
+		emailfiled.clear();
+		emailfiled.sendKeys(email);
+		
+		ElementVisible(passwordfield);
+		passwordfield.clear();
+		passwordfield.sendKeys(pass);
+		
+		ElementClickAble(signInBtn);
+	}
+	
 	
 	
 }
