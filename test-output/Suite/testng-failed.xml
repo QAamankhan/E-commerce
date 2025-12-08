@@ -6,9 +6,10 @@
     <classes>
       <class name="testPackage.RegistrationPageTest">
         <methods>
-          <include name="TC02"/>
+          <include name="TC03_ForgotPassword"/>
           <include name="init"/>
-          <include name="TC01"/>
+          <include name="ObjectCreation"/>
+          <include name="TC02_Login"/>
         </methods>
       </class> <!-- testPackage.RegistrationPageTest -->
     </classes>

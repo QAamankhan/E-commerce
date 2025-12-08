@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-12-08T15:23:04 IST" name="Suite" finished-at="2025-12-08T15:23:06 IST" duration-ms="2043">
+  <suite started-at="2025-12-08T17:03:09 IST" name="Suite" finished-at="2025-12-08T17:03:16 IST" duration-ms="7770">
     <groups>
     </groups>
-    <test started-at="2025-12-08T15:23:04 IST" name="Test" finished-at="2025-12-08T15:23:06 IST" duration-ms="2043">
+    <test started-at="2025-12-08T17:03:09 IST" name="Test" finished-at="2025-12-08T17:03:16 IST" duration-ms="7770">
       <class name="testPackage.RegistrationPageTest">
-        <test-method is-config="true" signature="init(java.lang.String)[pri:0, instance:testPackage.RegistrationPageTest@77c2494c]" started-at="2025-12-08T15:22:48 IST" name="init" finished-at="2025-12-08T15:23:04 IST" duration-ms="16133" status="PASS">
+        <test-method is-config="true" signature="init(java.lang.String)[pri:0, instance:testPackage.RegistrationPageTest@185a6e9]" started-at="2025-12-08T17:02:54 IST" name="init" finished-at="2025-12-08T17:03:09 IST" duration-ms="14337" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,18 +18,30 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method is-config="true" signature="ObjectCreation()[pri:0, instance:testPackage.RegistrationPageTest@77c2494c]" started-at="2025-12-08T15:23:04 IST" name="ObjectCreation" finished-at="2025-12-08T15:23:05 IST" duration-ms="298" status="PASS">
+        <test-method is-config="true" signature="ObjectCreation()[pri:0, instance:testPackage.RegistrationPageTest@185a6e9]" started-at="2025-12-08T17:03:09 IST" name="ObjectCreation" finished-at="2025-12-08T17:03:09 IST" duration-ms="165" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ObjectCreation -->
-        <test-method signature="TC01()[pri:0, instance:testPackage.RegistrationPageTest@77c2494c]" started-at="2025-12-08T15:23:05 IST" name="TC01" finished-at="2025-12-08T15:23:05 IST" duration-ms="391" status="PASS">
+        <test-method signature="TC01()[pri:0, instance:testPackage.RegistrationPageTest@185a6e9]" started-at="2025-12-08T17:03:09 IST" name="TC01" finished-at="2025-12-08T17:03:09 IST" duration-ms="289" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC01 -->
-        <test-method signature="TC02()[pri:0, instance:testPackage.RegistrationPageTest@77c2494c]" started-at="2025-12-08T15:23:05 IST" name="TC02" finished-at="2025-12-08T15:23:06 IST" duration-ms="1207" status="PASS">
+        <test-method is-config="true" signature="ObjectCreation()[pri:0, instance:testPackage.RegistrationPageTest@185a6e9]" started-at="2025-12-08T17:03:09 IST" name="ObjectCreation" finished-at="2025-12-08T17:03:09 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC02 -->
+        </test-method> <!-- ObjectCreation -->
+        <test-method signature="TC02_Login()[pri:0, instance:testPackage.RegistrationPageTest@185a6e9]" started-at="2025-12-08T17:03:09 IST" name="TC02_Login" finished-at="2025-12-08T17:03:14 IST" duration-ms="4277" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC02_Login -->
+        <test-method is-config="true" signature="ObjectCreation()[pri:0, instance:testPackage.RegistrationPageTest@185a6e9]" started-at="2025-12-08T17:03:14 IST" name="ObjectCreation" finished-at="2025-12-08T17:03:14 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ObjectCreation -->
+        <test-method signature="TC03_ForgotPassword()[pri:0, instance:testPackage.RegistrationPageTest@185a6e9]" started-at="2025-12-08T17:03:14 IST" name="TC03_ForgotPassword" finished-at="2025-12-08T17:03:16 IST" depends-on-methods="testPackage.RegistrationPageTest.TC02_Login" duration-ms="2877" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC03_ForgotPassword -->
       </class> <!-- testPackage.RegistrationPageTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
