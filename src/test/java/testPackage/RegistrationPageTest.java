@@ -1,6 +1,9 @@
 package testPackage;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+import org.testng.SkipException;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -12,7 +15,7 @@ public class RegistrationPageTest extends BaseTestClass {
 	RegistrationPage rp;
 	
 	
-	@BeforeTest
+	@BeforeMethod
 	public void ObjectCreation() {
 	rp =  new RegistrationPage(driver);
 	}
@@ -23,8 +26,23 @@ public class RegistrationPageTest extends BaseTestClass {
 		rp.ClickOnLoginLogo();
 	}
 	
+    boolean loginStatus = false;
+
 	@Test
-	public void TC02() {
-		rp.RegistrationForm("88aamankhan@gmail.com", "Aman@1234");
-	}
+    public void TC02_Login() throws Exception {
+      boolean  result = rp.RegistrationForm("88aamankhan@gmail.com", "Aman@1234");
+      
+      loginStatus=result;
+    }
+
+    @Test(dependsOnMethods = "TC02_Login")
+    public void TC03_ForgotPassword() {
+
+        if (loginStatus == true) {
+            System.out.println("Login Successful → Skipping Forgot Password");
+            throw new SkipException("Skipping because login was successful");
+        }
+
+        rp.ForgotPass("88aamankhan@gmail.com");
+    }
 }
